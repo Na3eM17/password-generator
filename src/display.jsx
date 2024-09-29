@@ -6,14 +6,7 @@ function Display(){
 
     const [value , setValue]=useState("");
     const [pps, setpps]=useState([...saveData]);
-    const [sympol, setsympol]=useState(false);
-    const [number, setnumber]=useState(false);
-    const [upper, setupper]=useState(false);
-    const [lower, setlower]=useState(false);
-    const[num1, setnum1]=useState(0);
-    const[num2, setnum2]=useState(0);
-    const[num3, setnum3]=useState(0);
-    const[num4, setnum4]=useState(0);
+    
 
     useEffect(() =>{
         localStorage.setItem("data" , JSON.stringify(pps));
@@ -46,48 +39,16 @@ function Display(){
          
     }
     
-    function change1(){
-        if(num1==0){
-            setsympol(true)
-            setnum1(1)
-        }else{
-            setsympol(false)
-            setnum1(0)
-        }
-        
-    }
-    function change2(){
-        if(num2==0){
-            setnumber(true)
-            setnum2(1)
-        }else{
-            setnumber(false)
-            setnum2(0)
-        }
-    }
-    function change3(){
-        if(num3==0){
-            setupper(true)
-            setnum3(1)
-        }else{
-            setupper(false)
-            setnum3(0)
-        }
-    }
-    function change4(){
-        if(num4==0){
-            setlower(true)
-            setnum4(1)
-        }else{
-            setlower(false)
-            setnum4(0)
-        }
-    }
+    const lower=true;
+    const upper=true;
+    const sympol=true;
+    const number=true;
     const length=12;
 
 
     function clear(){
         setValue("");
+        setpps([]);
     }
 
     function addList(){
@@ -108,20 +69,6 @@ function Display(){
         
         <div className="containor">
 
-        <h1>GENERATE WITH</h1>
-
-        <div className="checkbox">
-            sympol
-            <input type="checkbox"value={sympol} onClick={()=>change1()}/>
-            number
-            <input type="checkbox"value={number} onClick={()=>change2()}/>
-        </div>
-        <div className="checkbox">
-        uppercase
-            <input type="checkbox"value={upper} onClick={()=>change3()}/>
-            loercase
-            <input type="checkbox"value={lower} onClick={()=>change4()}/>
-        </div>
 
         <div className="input-btn">
             <input id="in"  value={value} readOnly  placeholder="...."/>
