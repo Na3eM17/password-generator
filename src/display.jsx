@@ -11,8 +11,6 @@ function Display() {
   const [num3, setnum3] = useState(0);
   const [num4, setnum4] = useState(0);
 
-  u;
-
   function generate(length, upper, lower, number, sympol) {
     const lc = "abcdefghijklmnopqrstuvwxyz";
     const uc = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
