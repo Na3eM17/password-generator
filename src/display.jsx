@@ -1,8 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 function Display() {
-  const saveData = JSON.parse(localStorage.getItem("data"));
-
   const [value, setValue] = useState("");
   const [pps, setpps] = useState(saveData);
   const [sympol, setsympol] = useState(false);
@@ -13,10 +11,6 @@ function Display() {
   const [num2, setnum2] = useState(0);
   const [num3, setnum3] = useState(0);
   const [num4, setnum4] = useState(0);
-
-  useEffect(() => {
-    localStorage.setItem("data", JSON.stringify(pps));
-  });
 
   function generate(length, upper, lower, number, sympol) {
     const lc = "abcdefghijklmnopqrstuvwxyz";
