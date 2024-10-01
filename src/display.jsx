@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 
 function Display() {
-  const saveData = [...JSON.parse(localStorage.getItem("data"))];
+  const saveData = JSON.parse(localStorage.getItem("data"));
 
   const [value, setValue] = useState("");
-  const [pps, setpps] = useState([...saveData]);
+  const [pps, setpps] = useState(saveData);
   const [sympol, setsympol] = useState(false);
   const [number, setnumber] = useState(false);
   const [upper, setupper] = useState(false);
