@@ -11,6 +11,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 #root{
   display: flex;
@@ -31,6 +32,9 @@ a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
+}
+b{
+  font-size: 20px;
 }
 a:hover {
   color: #535bf2;
@@ -82,6 +86,7 @@ button:hover {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  cursor: pointer;
 }
 
 .input-btn{
@@ -94,18 +99,21 @@ button:hover {
 input{
   height: 100%;
   width: 100%;
-  border: 1px solid white;
+  border: 1px solid rgb(138, 138, 138);
+  color: #ffffff;
   background-color: rgba(0, 0, 0, 0.541);
   
 }
-
+input:hover{
+  border: 1px solid rgb(255, 255, 255);
+}
 .btn-save{
   height: 100%;
   position: absolute;
   top: 5%;
   right: -1%;
   padding: 0.6em 1.2em;
-  font-size: 0.7em;
+  font-size: 15px;
   font-weight: 500;
   font-family: Arial, Helvetica, sans-serif;
   background-color: #213547;
@@ -125,6 +133,7 @@ li{
   margin: 10px 0;
   align-items: center;
   font-size: 20px;
+  cursor: pointer;
 }
 h1{
   font-size: 3.2em;
@@ -145,10 +154,28 @@ h1{
   padding: 10px;
   width: 40%;
 }
+.midea{
+  margin-top: 20px;
+  font-size: 18px;
+  color: white;
+  background-color: #213547;
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 10px;
+}
+.midea option{
+  background-color:#64646465;
+  color: white;
+}
 .checkbox{
   display: flex;
   justify-content: space-evenly;
   width: 100%;
+}
+.checkCon{
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 .checkbox input{
   width: 20px;
@@ -160,9 +187,13 @@ h1{
   h1{
     font-size: 20px;
     -webkit-text-stroke-color: black;
-    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-width: 1px;
     font-weight: 700;
     margin-bottom: 20px;
+  }
+  .input-btn{
+    height: 30px;
+    width: 80%;
   }
   button{
     width: 50%;
@@ -175,13 +206,26 @@ h1{
   ul{
     width: 90%;
   }
+  b{
+    font-size: 10px;
+  }
+  li{
+    font-size: 15px;
+    gap: 5px;
+  }
+ .midea{
+    font-size: 15px;
+    padding: 5px;
+ }
   .btn-save{
     width: 60px;
     font-size: 15px;
-    padding: 10px;
+    padding: 5px;
+    right: -1%;
   }
+  
   .hello{
     font-size: 40px;
-    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-width: 1px;
   }
 }
